@@ -1,6 +1,8 @@
 package com.example.thehungrydeveloper;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,5 +21,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startercard = findViewById(R.id.card_view_starter);
         maincard = findViewById(R.id.card_view_main);
+
+        startercard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent starterActivityIntend =  new Intent(MainActivity.this,StartersActivity.class);
+                startActivity(starterActivityIntend);
+            }
+        });
+
+        maincard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent menuCourseIntendActivity =  new Intent(MainActivity.this,MenuCourseActivity.class);
+                startActivity(menuCourseIntendActivity);
+            }
+        });
     }
 }
