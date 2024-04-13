@@ -18,11 +18,24 @@
             android:textColor="@color/design_default_color_primary_dark"
             android:textSize="40sp"></TextView>
 
+        <TextView
+            android:id="@+id/text_view_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="12dp"
+            android:text="newtest151285@gmail.com"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/text_view_restaurant_name"
+            >
+
+        </TextView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_starter"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/text_view_restaurant_name"
+            android:layout_below="@id/text_view_email"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="60dp">
 

@@ -1,8 +1,10 @@
 package com.example.thehungrydeveloper;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -37,5 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(menuCourseIntendActivity);
             }
         });
+
+        TextView textViewEmail = findViewById(R.id.text_view_email);
+        textViewEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent emailIntend = new Intent(Intent.ACTION_SENDTO);
+                emailIntend.setData(Uri.parse("mailto:newtest151285@gmail.com")); // Only email apps handle this.
+                startActivity(emailIntend);
+            }
+        });
+
     }
 }
